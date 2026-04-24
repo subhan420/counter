@@ -47,36 +47,33 @@ button:hover {
  
 @media (max-width: 430px) {
   body {
-    overflow-x: hidden;
+    padding: 10px;
+    align-items: flex-start; /* prevents weird vertical centering issues */
   }
- 
+
   .container {
     width: 100%;
-    padding: 0 24px;
-    box-sizing: border-box;
+    max-width: 100%;
   }
- 
+
   h1 {
     font-size: 2rem;
-    margin: 0 0 12px;
   }
- 
+
   #value {
     font-size: 3rem;
-    margin: 16px 0;
-    display: block;
+    margin: 15px 0;
   }
- 
+
   .btn-container {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: column; /* stack buttons vertically */
     gap: 12px;
     width: 100%;
   }
- 
+
   button {
-    width: 100%;
-    padding: 14px 0;
+    width: 100%; /* full width buttons = clean mobile look */
+    padding: 12px;
     font-size: 1rem;
   }
 }
