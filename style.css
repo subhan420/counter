@@ -45,35 +45,43 @@ button:hover {
   color: white;
 }
  
+/* ── Mobile Large (430px and below) ── */
 @media (max-width: 430px) {
   body {
-    padding: 10px;
-    align-items: flex-start; /* prevents weird vertical centering issues */
+    /* Prevent any chance of horizontal overflow */
+    overflow-x: hidden;
   }
-
+ 
   .container {
     width: 100%;
-    max-width: 100%;
+    padding: 0 24px;
+    /* box-sizing so padding doesn't push past 100vw */
+    box-sizing: border-box;
   }
-
+ 
   h1 {
     font-size: 2rem;
+    margin: 0 0 12px;
   }
-
+ 
   #value {
     font-size: 3rem;
-    margin: 15px 0;
+    margin: 16px 0;
+    display: block;
   }
-
+ 
   .btn-container {
-    flex-direction: column; /* stack buttons vertically */
+    /* Stack buttons vertically so they never overflow */
+    flex-direction: column;
+    align-items: stretch;
     gap: 12px;
     width: 100%;
   }
-
+ 
   button {
-    width: 100%; /* full width buttons = clean mobile look */
-    padding: 12px;
+    width: 100%;
+    padding: 14px 0;
     font-size: 1rem;
+    /* Larger tap target for thumbs */
   }
 }
